@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<style>
+   .egg {
+  position: relative;
+  width: 100px;
+  height: 130px;
+  background: linear-gradient(to bottom, #f7c36d, #e0a95b); 
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span{
+   text-align: center;
+  }
+}
+.egg::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 20px;
+  height: 20px;
+  background:radial-gradient(rgba(255, 255, 255, 0.4) , rgba(255, 255, 255, 0.3) 30% 50%, rgba(255, 255, 255, 0.2) 100%) ;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #fff;
+  transform: rotate(45deg);
+}
+</style>
+<body>
+   <form action="#">
+      <input type="text" name="userName">
+      <input type="email" name="userEmail" ><style>
+
+      </style>
+      <button type="submit">send data</button>
+   </form>
+   <div class="egg">
+      <span>
+         Христос Воскресе!
+      </span>
+         
+   </div>
+   <script>
+      const form = document.querySelector('form')
+      form.addEventListener('submit', e => {
+         e.preventDefault()
+         const data = new FormData(form)
+         fetch('http://example.com', {
+            method:'POST',
+            body:data 
+         })
+      })
+      
+   </script>
+</body>
+</html>

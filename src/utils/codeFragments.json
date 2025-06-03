@@ -1,0 +1,22 @@
+{
+   "codeFragments": [
+     {
+       "id": "1",
+       "title": "Создание проекта Vite",
+       "content": "npm create vite@latest"
+     },
+     {
+       "id": "2",
+       "title": "Настройка Vue приложения",
+       "content": "<span class=\"import\">import</span> <span class=\"bracket\">{</span> createApp <span class=\"bracket\">}</span> <span class=\"import\">from</span> <span class=\"text\">'vue'</span>\n<span class=\"import\">import</span> router <span class=\"import\">from</span> <span class=\"text\">'./router/router.js'</span>\n<span class=\"import\">import</span> <span class=\"text\">'./style.css'</span>\n<span class=\"import\">import</span> App <span class=\"import\">from</span> <span class=\"text\">'./App.vue'</span>\n\n<span class=\"keyword\">const</span> <span class=\"varname\">app</span> = createApp<span class=\"bracket\">(</span>App<span class=\"bracket\">)</span>\n<span class=\"varname\">app</span>.use<span class=\"bracket\">(</span>router<span class=\"bracket\">)</span>\n<span class=\"varname\">app</span>.mount<span class=\"bracket\">(</span>'#app'<span class=\"bracket\">)</span>"
+     }
+   ],
+   
+      "codeList": [
+        {
+          "id": "1",
+          "content": "import { createApp } from 'vue';\nimport router from './router/router.js';\nimport './style.css';\nimport App from './App.vue';\nimport 'highlight.js/styles/stackoverflow-light.css';\nimport hljs from 'highlight.js/lib/core';\nimport javascript from 'highlight.js/lib/languages/javascript';\nimport hljsVuePlugin from \"@highlightjs/vue-plugin\";\n\nhljs.registerLanguage('javascript', javascript);\n\nconst app = createApp(App);\napp.use(hljsVuePlugin);\napp.use(router);\napp.mount('#app');"
+        }
+      ]
+    
+ }
